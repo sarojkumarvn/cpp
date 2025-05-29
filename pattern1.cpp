@@ -13,9 +13,10 @@ void pattern1()
 }
 void pattern2()
 {
-    for (int i = 0; i <= 5; i++)
+    int n = 6;
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 1; j <= i; j++)
+        for (int j = 0; j < i; j++)
         {
             cout << "*";
         }
@@ -47,9 +48,10 @@ void pattern4()
 }
 void pattern5()
 {
-    for (int i = 1; i < 6; i++)
+    int n = 6;
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 5; j >= i; j--)
+        for (int j = 0; j < n - i - 1; j++)
         {
             cout << "*";
         }
@@ -103,7 +105,7 @@ void pattern8()
             cout << " ";
         };
 
-        for (int j = 0; j < 2*n - (2*i + 1); j++)
+        for (int j = 0; j < 2 * n - (2 * i + 1); j++)
         {
             cout << "*";
         };
@@ -115,10 +117,69 @@ void pattern8()
         cout << endl;
     }
 }
+void pattern10()
+{
+    int n = 5;
+    for (int i = 1; i <= 2 * n - 1; i++)
+    { // it will give us 9 rows
+        int stars = i;
+        if (i > n)
+            stars = 2 * n - i;
+        for (int j = 1; j <= stars; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+void pattern11()
+{
+    int start = 1;
+    int n = 5;
+    for (int i = 0; i < n; i++)
+    {
+        if (i % 2 == 0)
+            start = 1;
+        else
+            start = 0;
+        for (int j = 0; j <= i; j++)
+        {
+            cout << start;
+            start = 1 - start;
+        }
+        cout << endl;
+    }
+}
+void pattern12()
+{
+    int n = 4;
+    int space = 2 * (n - 1) ;
+     for (int i = 1; i <= n; i++)
+    {
+        // number
+        for (int j = 1; j <= i; j++)
+        {
+            cout << j; // perfect
+        }
+        // space
+        for (int j = 1; j <= space; j++)
+        {
+            cout << " ";
+        }
+
+        // number
+        for (int j = i; j >= 1; j--)
+        {
+            cout << j;
+        }
+        cout << endl;
+        space -= 2 ;
+    }
+}
 
 int main()
 {
 
-    pattern8();
+    pattern12();
     return 0;
 }
