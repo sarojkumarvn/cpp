@@ -23,7 +23,6 @@ void pattern2()
         cout << endl;
     }
 }
-
 void pattern3()
 {
     for (int i = 1; i < 6; i++)
@@ -58,7 +57,6 @@ void pattern5()
         cout << endl;
     }
 }
-
 void pattern6()
 {
     for (int i = 1; i < 6; i++)
@@ -94,7 +92,6 @@ void pattern7()
         cout << endl;
     }
 }
-
 void pattern8()
 {
     int n = 5;
@@ -190,7 +187,6 @@ void pattern13()
         cout << endl;
     }
 }
-
 void pattern14()
 {
     int n = 6;
@@ -204,13 +200,68 @@ void pattern14()
         cout << endl;
     }
 }
-
 void pattern15()
 {
     int n = 6;
     for (int i = 1; i < n; i++)
-    { 
-        for (char ch = 'A'; ch < 'A' + n-i ; ch++)
+    {
+        for (char ch = 'A'; ch < 'A' + n - i; ch++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+void pattern16()
+{
+    int n = 4;
+    for (int i = 0; i < n; i++)
+    {
+        char ch = 'A' + i;
+        for (int j = 0; j <= i; j++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+void pattern17()
+{
+    int n = 6;
+    for (int i = 0; i < n; i++)
+    {
+        // space
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        // star
+        char ch = 'A';
+        int breakpoint = (2 * i + 1) / 2 + 1;
+        for (int j = 1; j <= 2 * i + 1; j++)
+        {
+            cout << ch;
+            if (j < breakpoint)
+                ch++;
+            else
+                ch--;
+        }
+
+        // space
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+void pattern18() // TO BE CHECKED FOR ISSUE
+{
+    int n = 7;
+    for (int i = 0; i < n; i++)
+    {
+
+        for (char ch = 'E' - i; ch < 'E'; ch++)
         {
             cout << ch << " ";
         }
@@ -220,6 +271,6 @@ void pattern15()
 int main()
 {
 
-    pattern15();
+    pattern18();
     return 0;
 }
