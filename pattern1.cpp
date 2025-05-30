@@ -153,8 +153,8 @@ void pattern11()
 void pattern12()
 {
     int n = 4;
-    int space = 2 * (n - 1) ;
-     for (int i = 1; i <= n; i++)
+    int space = 2 * (n - 1);
+    for (int i = 1; i <= n; i++)
     {
         // number
         for (int j = 1; j <= i; j++)
@@ -173,13 +173,53 @@ void pattern12()
             cout << j;
         }
         cout << endl;
-        space -= 2 ;
+        space -= 2;
+    }
+}
+void pattern13()
+{
+    int num = 1;
+    int n = 5;
+    for (int i = 1; i <= n; i++) // outer loop
+    {
+        for (int j = 1; j <= i; j++)
+        { // inner loop
+            cout << num << " ";
+            num += 1;
+        }
+        cout << endl;
     }
 }
 
+void pattern14()
+{
+    int n = 6;
+    for (int i = 0; i < n; i++) // outer loop
+    {
+        for (char j = 'A'; j < 'A' + i; j++)
+        {
+            cout << j << " ";
+        }
+
+        cout << endl;
+    }
+}
+
+void pattern15()
+{
+    int n = 6;
+    for (int i = 1; i < n; i++)
+    { 
+        for (char ch = 'A'; ch < 'A' + n-i ; ch++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
 int main()
 {
 
-    pattern12();
+    pattern15();
     return 0;
 }
