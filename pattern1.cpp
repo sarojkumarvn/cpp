@@ -381,11 +381,137 @@ void pattern22()
         cout << endl;
     }
 }
+void pattern23(){
+    int n = 5;
+    for(int i = 0 ; i < n ; i ++){
+		 int number = 1 ;
+		 for (int j = 0 ; j < i ; j ++){
+			 cout << number;
+		 }
+		 cout << endl ;
+	}
+}
+
+void numberCrown() {
+    // Write your code here.
+    int n = 5;
+    for(int i = 1 ; i <= n ; i++){ //outer loop
+        int spacing = 2 * (n - i); //space
+      for(int j = 1 ; j <= i ; j++){
+          cout << j ;
+      }
+      for(int j = 1 ; j <= spacing ; j ++){
+          cout << " ";
+
+      }
+      for(int j = i ; j >= 1 ; j--){
+          cout << j;
+      }
+      cout << endl;
+      spacing -= 2;
+
+    }
+}
+void test(){
+    int n = 4;
+   for(int i = 0 ; i < n ; i++){ //outer loop
+    
+    for(char ch = 'C' ; ch >='C'-i ; ch--){
+        cout << ch << " ";
+    }
+    cout << endl ;
+    }
+}
+    
+  void test2(){
+    {
+    // Write your code here.
+    int n = 5;
+    int inis = 0 ;
+    for(int i = 0 ; i < n ; i++){
+        //stars
+        for(int j = 0 ; j<= n- i ; j++){
+            cout << "*";
+        }
+        //space
+
+        for(int j = 0 ; j < inis ; j++){
+            cout << " ";
+        }
+        //stars
+
+        for(int j = 0 ; j <= n-i ; j++){
+            cout << "*";
+        }
+        cout << endl ;
+     inis += 2;
+
+    }
+    for(int i =1 ; i<= n ; i++){ //outer loop
+        int inis = 2*n - 2;
+      for(int j = 1 ; j <= i ; j++){
+          cout << "*";
+      }
+      for(int j = 1 ; j <= inis ; j++){
+          cout << " ";
+      }
+      for(int j = 1 ; j<= i ; j++){
+          cout << "*";
+      }
+
+ cout << endl ;
+inis -= 2;
+    }
+}
+  }
+    
+ void symmetry() {
+    int n = 3;
+    // Write your code here.
+   
+    for(int i = 0 ; i < n ; i++){
+        //stars
+        for(int j = 0 ; j< n- i ; j++){
+            cout << "*";
+        }
+        //space
+
+        for(int j = 0 ; j < 2*i ; j++){
+            cout << " ";
+        }
+        //stars
+
+        for(int j = 0 ; j < n- i ; j++){
+            cout << "*";
+        }
+        cout << endl ;
+     
+
+    }
+   
+    for(int i =1 ; i<= n ; i++){ //outer loop
+      for(int j = 0 ; j < i ; j++){
+          cout << "* ";
+      }
+      for(int j = 0 ; j < 2*n -2*i  ; j++){
+          cout << " ";
+      }
+      for(int j = 0 ; j< i ; j++){
+          cout << "*";
+      }
+
+ cout << endl ;
+
+    }
+}
 int main()
 
 {
 
-    pattern22();
+//   test2();
+//   pattern19();
+// symmetry();
+pattern20();
     // cout << "Hello world ";
     return 0;
 }
