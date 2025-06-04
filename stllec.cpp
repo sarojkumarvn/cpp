@@ -7,16 +7,10 @@ int sum(int a, int b)
     return a + b;
 }
 
-void testingfunction()
-{
-    cout << "Hello world";
-}
-
 int main()
 {
     int s = sum(1, 10);
     cout << s;
-    testingfunction();
 
     vector<int> v = {10, 20, 30, 40, 50};
     v.pop_back();
@@ -90,15 +84,92 @@ int main()
     // if we push two or more same elems it takes only once
 
     set<int> newst;
-       newst.insert(5);
-       newst.insert(50);
-       newst.insert(58);
-       newst.insert(54);
-       newst.insert(65);
-       newst.insert(65);
-       newst.insert(65);
+    newst.insert(5);
+    newst.insert(50);
+    newst.insert(58);
+    newst.insert(54);
+    newst.insert(65);
+    newst.insert(65);
+    newst.insert(65);
 
-    
+    auto it = newst.find(65); // it will find the elem in the set
+
+    newst.erase(it); // and it will erase that elem
+
+    for (auto x : newst)
+    {
+        cout << x << " "; // it will print the each elem of the set
+    }
+
+    //{ 5, 50, 58, 54, 65 }
+    auto it1 = newst.find(58);
+    auto it2 = newst.find(65);
+    newst.erase(it1, it2); // it will erase the elem from it1 to it2
+
+    cout << endl;
+    for (auto x : newst)
+    {
+        cout << x << " ";
+    }
+
+    /*
+    Set:      {10, 20, 30, 40, 50}
+
+          lower_bound(25) → Finds first number ≥ 25 → 30
+          upper_bound(30) → Finds first number > 30 → 40
+
+    */
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    // MULTISET -- It stores the repreatedd value also
+    multiset<int> newst1;
+    newst1.insert(5);
+    newst1.insert(50);
+    newst1.insert(58);
+    newst1.insert(54);
+    newst1.insert(65);
+    newst1.insert(65);
+    newst1.insert(65);
+
+    newst1.erase(newst1.find(54));
+    for (auto x : newst1)
+    {
+        cout << x << " ";
+    }
+
+    // UNORDERD SET
+    unordered_set<int> newnewst;
+    // All the operations are same
+
+    // MAP - It stores unique keys in sorted order , similar to set data order
+
+    // map< key , value > name ;
+    map<int, int> mpp;
+    map<int, pair<int, int>> mpp2;
+    map<pair<int, int>, int> mpp3;
+
+    mpp[1] = 2;
+    // Rest all are same
+
+    // MULTIMAP
+
+    /*
+
+    similar to the map but it can stores multiple key values
+    */
+
+
+// SORTING THROUGH STL
+/*
+sort(a , a+n ); // for an array 
+
+sort( v.begin() , v.end()); // for vectors
+
+
+
+*/
 
     return 0;
 }
