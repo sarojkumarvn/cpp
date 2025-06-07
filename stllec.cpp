@@ -135,7 +135,7 @@ int main()
 
     newst1.erase(newst1.find(54));
     for (auto x : newst1)
-    {
+    { 
         cout << x << " ";
     }
 
