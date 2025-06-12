@@ -2,14 +2,15 @@
 using namespace std;
 
 void selection_sort(int n, int arr[]) {
-    for (int i = 0; i <= n - 2; i++) {
+    for (int i = 0; i < n ; i++) { // from this we can target the array i --> index ;
         int mini = i;
-        for (int j = i + 1; j <= n-1; j++) {
+        // arr[] = {1 7 2 4 2 8 6 5}
+        for (int j = i + 1; j < n; j++) {
             if (arr[j] < arr[mini]) {
                 mini = j;
             }
         }
-        // Swap arr[i] and arr[mini]
+        // Swap arr[i] and arr[mini] in which arr[mini] == arr[j] so  in this we are swapping arr[i] and arr[j]
         int temp = arr[i];
         arr[i] = arr[mini];
         arr[mini] = temp;
